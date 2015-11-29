@@ -1,7 +1,8 @@
-# Dashboard page for Way Out West Hack 2015
+# Dashboard page for Hack for Refugees 2015
 
 Built by [Johan Brook](http://johanbrook.com) unless otherwise noted.
 Updated for 2015 year's hack by [Josefin Ondrus](https://github.com/ondrus/).
+Updated for 2015 year's Hack for Refugees
 
 ## Developing
 
