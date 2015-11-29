@@ -113,7 +113,7 @@ var Commits = (function() {
 
       var json = transformData(data)
 
-      this.$el.append(this.template(json))
+      this.$el.prepend(this.template(json))
       return this
     }
   }

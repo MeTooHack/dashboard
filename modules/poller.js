@@ -37,7 +37,7 @@ var Poller = (function() {
 
     if(eventListeners["data"]){
       eventListeners["data"].map(function(cb){
-        cb({commits:json.slice(0, index), total: totalCommits});
+        cb({commits:json.slice(0, index).reverse(), total: totalCommits});
       });
     }
 
