@@ -52,13 +52,13 @@ var Commits = (function() {
       return commitUrl.replace("https://api.github.com/repos/hackforrefugees/", "");
     }
 
-    var message = json.message
+    var message = json.payload.commits[0].message || '';
 
     if(/<script>(.+)<\/script>/.test(json.message)) {
       message = "*** Look, I'm a script kiddie, tihi! ***"
     }
 
-    message = safe_tags_replace(json.payload.commits[0].message)
+    message = safe_tags_replace(message);
 
     return extend({}, json, {
       message: message,
@@ -108,8 +108,8 @@ var Commits = (function() {
       if(!this.template) {
         throw "No template provided! Call Commits.templateString with a string"
       }
-
-      if(commitIsMerge(data)) return
+      if(!data.payload.commits) return;
+      if(commitIsMerge(data.payload.commits[0].message)) return
 
       var json = transformData(data)
 
