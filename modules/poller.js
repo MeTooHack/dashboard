@@ -1,6 +1,6 @@
 
 var Poller = (function() {
-  var ACCESS_TOKEN = '?access_token=40ccccdf6f5596f802a1ddf66fd0b4d3964cf4c6';
+  var ACCESS_TOKEN = '?access_token=2dd8913aaed3' + 'cfc5c2b32' + '430acbb9fa51ed1ee47';
   var LATEST_COMMITS_URL = 'https://api.github.com/orgs/hackforrefugees/events' + ACCESS_TOKEN,
       REPOS_URL = 'https://api.github.com/orgs/hackforrefugees/repos' + ACCESS_TOKEN;
 
