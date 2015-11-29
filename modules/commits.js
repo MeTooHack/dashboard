@@ -49,9 +49,7 @@ var Commits = (function() {
     }
 
     function parseTeam(commitUrl) {
-      var repoRegex = /https:\/\/github.com\/HackOutWest15\/([._-\w]+)\//,
-          res = commitUrl.match(repoRegex, 'g')
-      return res && res[1]
+      return commitUrl.replace("https://api.github.com/repos/hackforrefugees/", "");
     }
 
     var message = json.message
@@ -60,13 +58,13 @@ var Commits = (function() {
       message = "*** Look, I'm a script kiddie, tihi! ***"
     }
 
-    message = safe_tags_replace(message)
+    message = safe_tags_replace(json.payload.commits[0].message)
 
     return extend({}, json, {
       message: message,
-      by: json.committer.username || json.committer.name,
-      date: formatDate(json.timestamp),
-      team: parseTeam(json.url)
+      by: json.actor.login || json.payload.commits[0].author.name,
+      date: formatDate(json.created_at),
+      team: parseTeam(json.repo.url)
     })
   }
 
@@ -76,16 +74,17 @@ var Commits = (function() {
 
   return {
 
-    setFirebase: function (fb) {
-      this._fb = fb
+    setPoller: function (poller) {
+      this._p = poller
       return this
     },
 
     run: function(limit) {
       this._limit = (limit || this._limit) || 8
 
-      this._fb.limit(this._limit)
-        .on('child_added', this.render.bind(this))
+      this._p.on('data', function(data){
+        data.commits.map(this.render.bind(this))
+      }.bind(this));
 
       return Object.create(this)
     },
@@ -110,11 +109,11 @@ var Commits = (function() {
         throw "No template provided! Call Commits.templateString with a string"
       }
 
-      if(commitIsMerge(data.val())) return
+      if(commitIsMerge(data)) return
 
-      var json = transformData(data.val())
+      var json = transformData(data)
 
-      this.$el.prepend(this.template(json))
+      this.$el.append(this.template(json))
       return this
     }
   }
@@ -122,19 +121,19 @@ var Commits = (function() {
 
 var CommitsCounter = (function () {
 
-
-  var increaseCounter = function () {
+  var increaseCounter = function (data) {
+    this._counter = data.total;
 
     this.$el
-      .text(this._counter++)
+      .text(this._counter)
 
     return this
   }
 
   return {
 
-    setFirebase: function (fb) {
-      this._fb = fb
+    setPoller: function (poller) {
+      this._p = poller
       return this
     },
 
@@ -146,8 +145,8 @@ var CommitsCounter = (function () {
     run: function () {
       this._counter = 0
 
-      this._fb
-        .on('child_added', increaseCounter.bind(this))
+      this._p
+        .on('data', increaseCounter.bind(this))
 
       return Object.create(this)
     }
@@ -156,17 +155,16 @@ var CommitsCounter = (function () {
 
 $(function() {
 
-  var fireBase = new Firebase("https://hack-out-west-2015.firebaseio.com/commits")
-
   Commits
-    .setFirebase(fireBase)
+    .setPoller(Poller)
     .setElement('#commits')
-    .limit(15)
     .templateString($("#commit-template").html())
     .run()
 
   CommitsCounter
-    .setFirebase(fireBase)
+    .setPoller(Poller)
     .setElement('#commit-counter')
     .run()
+
+  Poller.start();
 })
