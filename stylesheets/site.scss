@@ -4,9 +4,9 @@
 @import "icons";
 @import "sliding-nav";
 
-$background: #1E1E1A;
+$background: #fff;
 $accent: $background;
-$text-color: #fff;
+$text-color: #000;
 $leading: 1.6;
 
 $font-size: 18;
@@ -23,11 +23,11 @@ $mono: Monaco, Courier, monospaced;
 }
 
 ::selection {
-  background-color: #fff;
+  background-color: #000;
   color: $background;
 }
 ::-moz-selection {
-  background-color: #fff;
+  background-color: #000;
   color: $background;
 }
 
@@ -108,10 +108,11 @@ h2 {
   margin-bottom: $lineheight / 2;
 
   h1 {
-    font-size: to_em(24);
+    font-size: to_em(40);
     text-align: center;
-    letter-spacing: 15px;
-    font-weight: 600;
+    font-weight: normal;
+    font-family: "Pacifico",serif;
+    text-transform: none;
   }
 
   .grid__item:first-child {
@@ -146,15 +147,15 @@ dd {
 }
 
 section > h1 {
-  border-bottom: 2px solid rgba(#fff, .5);
+  border-bottom: 2px solid rgba(#000, .5);
   margin-bottom: $lineheight / 2;
 }
 
 [role="article"] {
   position: relative;
   margin-bottom: $lineheight;
-  background-color: #fff;
-  color: #333;
+  background-color: #FF6E40;
+  color: #fff;
   border-radius: 5px;
   padding: 1em 2em;
   box-shadow: rgba(#000, .3) 0 1px 3px;
@@ -211,7 +212,7 @@ section > h1 {
   &.detailed {
     small {
       margin-left: 5px;
-      color: rgba(#fff, .7);
+      color: rgba(#000, .7);
     }
   }
 }
@@ -246,7 +247,7 @@ section > h1 {
 }
 
 .badge {
-  background-color: #fff;
+  background-color: #000;
   color: darken($background, 10%);
   padding: 1px 3px;
   border-radius: 3px;
@@ -256,8 +257,8 @@ section > h1 {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(#fff, .6);
-  color: #fff;
+  border-bottom: 1px solid rgba(#000, .6);
+  color: #000;
   display: inline-block;
   transition: border-color .2s;
 
@@ -265,7 +266,7 @@ a {
     transform: scale(.98);
   }
   &:hover {
-    border-color: #fff;
+    border-color: #000;
   }
 }
 
@@ -280,8 +281,7 @@ time {
 
 .tooltip {
   opacity: 0;
-  background-color: #fff;
-  color: darken($background, 10%);
+  background-color: darken($background, 10%);
   padding: 2px 6px;
   border-radius: 3px;
   transition: all .1s ease-out;
@@ -295,8 +295,8 @@ time {
     display: block;
     width: 0;
     height: 0;
-    border: $size solid #fff;
-    border-color: #fff transparent transparent;
+    border: $size solid #000;
+    border-color: #000 transparent transparent;
     position: absolute;
     left: calc(50% - #{$size});
     bottom: -$size * 2;
@@ -363,7 +363,7 @@ time {
 
   .list {
     height: 500px;
-    overflow: scroll;
+    //overflow: scroll;
   }
 }
 
@@ -391,7 +391,7 @@ time {
   box-shadow: rgba(#000, .5) -4px 0 30px;
 }
 .slide-open .slide-pusher {
-  border-left: 1px solid rgba(#fff, .3);
+  border-left: 1px solid rgba(#000, .3);
 }
 
 /* countdown */
@@ -405,10 +405,10 @@ time {
   display: inline-block;
   border-radius: 10px;
   height: 3px;
-  background-color: #fff;
+  background-color: #ccc;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
-  box-shadow: rgba(#fff, .9) 0 0 6px;
+  box-shadow: rgba(#ccc, .9) 0 0 6px;
 }
 
 .indicator {
@@ -464,12 +464,11 @@ button {
   -webkit-appearance: none;
 
   border-radius: 2em;
-  border: 1px solid rgba(#fff, .5);
+  border: 1px solid rgba(#4569FF, .5);
   color: #fff;
   text-align: center;
   padding: 3px 1em;
-  background: none;
-  color: rgba(#fff, .9);
+  background-color: #4569FF;
   cursor: pointer;
   transition: all .2s;
 
@@ -493,7 +492,8 @@ button {
 
   &:hover {
     color: #fff;
-    border-color: #fff;
+    border-color: #4569FF;
+    background-color: darken($background, 5%);
   }
 
   &:active, &:focus {
@@ -503,7 +503,7 @@ button {
   &:active,
   &:focus,
   &.active {
-    background-color: #fff;
+    background-color: #4569FF;
     color: darken($background, 5%);
   }
 }
@@ -521,7 +521,7 @@ button {
 [role="contentinfo"] {
   text-align: center;
   font-size: .8em;
-  color: rgba(#fff, .8);
+  color: rgba(#000, .8);
   cursor: default;
 }
 

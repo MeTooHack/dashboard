@@ -964,22 +964,22 @@ h1 .icon {
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #fff;
-  color: #1E1E1A; }
+  background-color: #000;
+  color: #fff; }
 
 ::-moz-selection {
-  background-color: #fff;
-  color: #1E1E1A; }
+  background-color: #000;
+  color: #fff; }
 
 html {
-  color: #fff;
+  color: #000;
   -webkit-font-smoothing: antialiased; }
 
 body {
   font: 600 1.125em / 1.6 "Source Sans Pro", "Helvetica Neue", sans-serif; }
 
 .wrapper {
-  background-color: #1E1E1A;
+  background-color: #fff;
   padding: 1% 3% 1.8em; }
 
 html.danger .wrapper::after {
@@ -1025,16 +1025,17 @@ h2 {
   letter-spacing: 0; }
 
 .muted {
-  color: black; }
+  color: #dedede; }
 
 [role="banner"] {
   padding: 0.9em 0 0;
   margin-bottom: 0.9em; }
   [role="banner"] h1 {
-    font-size: 1.33333em;
+    font-size: 2.22222em;
     text-align: center;
-    letter-spacing: 15px;
-    font-weight: 600; }
+    font-weight: normal;
+    font-family: "Pacifico",serif;
+    text-transform: none; }
   [role="banner"] .grid__item:first-child a {
     display: inline-block;
     vertical-align: middle; }
@@ -1054,14 +1055,14 @@ dd {
   margin-bottom: 0.45em; }
 
 section > h1 {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 0.9em; }
 
 [role="article"] {
   position: relative;
   margin-bottom: 1.8em;
-  background-color: #fff;
-  color: #333;
+  background-color: #FF6E40;
+  color: #fff;
   border-radius: 5px;
   padding: 1em 2em;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px; }
@@ -1072,7 +1073,7 @@ section > h1 {
     text-transform: none;
     letter-spacing: 0; }
   [role="article"] a {
-    color: #10100e;
+    color: #f2f2f2;
     font-weight: 600;
     border: 0; }
     [role="article"] a:hover {
@@ -1110,7 +1111,7 @@ section > h1 {
   list-style: none; }
   .list.detailed small, .detailed.horizontal-list small, .detailed.schedule-list small, .detailed.checklist small {
     margin-left: 5px;
-    color: rgba(255, 255, 255, 0.7); }
+    color: rgba(0, 0, 0, 0.7); }
 
 .horizontal-list li {
   display: inline; }
@@ -1128,8 +1129,8 @@ section > h1 {
   font-weight: normal; }
 
 .badge, .bubble {
-  background-color: #fff;
-  color: #030302;
+  background-color: #000;
+  color: #e6e6e6;
   padding: 1px 3px;
   border-radius: 3px;
   font-weight: bold;
@@ -1137,14 +1138,14 @@ section > h1 {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  color: #000;
   display: inline-block;
   transition: border-color .2s; }
   a:active {
     transform: scale(0.98); }
   a:hover {
-    border-color: #fff; }
+    border-color: #000; }
 
 time {
   cursor: default; }
@@ -1154,8 +1155,7 @@ time {
 
 .tooltip {
   opacity: 0;
-  background-color: #fff;
-  color: #030302;
+  background-color: #e6e6e6;
   padding: 2px 6px;
   border-radius: 3px;
   transition: all .1s ease-out;
@@ -1167,8 +1167,8 @@ time {
     display: block;
     width: 0;
     height: 0;
-    border: 6px solid #fff;
-    border-color: #fff transparent transparent;
+    border: 6px solid #000;
+    border-color: #000 transparent transparent;
     position: absolute;
     left: calc(50% - 6px);
     bottom: -12px; }
@@ -1222,8 +1222,7 @@ time {
 .latest-commits {
   position: relative; }
   .latest-commits .list, .latest-commits .horizontal-list, .latest-commits .schedule-list, .latest-commits .checklist {
-    height: 500px;
-    overflow: scroll; }
+    height: 500px; }
 
 #commits + .gradient {
   position: absolute;
@@ -1231,7 +1230,7 @@ time {
   left: 0;
   right: 0;
   height: 30px;
-  background-image: -webkit-linear-gradient(top, transparent, #1E1E1A 90%); }
+  background-image: -webkit-linear-gradient(top, transparent, #fff 90%); }
 
 [role="complementary"] {
   padding: 1em;
@@ -1245,7 +1244,7 @@ time {
   box-shadow: rgba(0, 0, 0, 0.5) -4px 0 30px; }
 
 .slide-open .slide-pusher {
-  border-left: 1px solid rgba(255, 255, 255, 0.3); }
+  border-left: 1px solid rgba(0, 0, 0, 0.3); }
 
 /* countdown */
 .track {
@@ -1257,10 +1256,10 @@ time {
   display: inline-block;
   border-radius: 10px;
   height: 3px;
-  background-color: #fff;
+  background-color: #ccc;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
-  box-shadow: rgba(255, 255, 255, 0.9) 0 0 6px; }
+  box-shadow: rgba(204, 204, 204, 0.9) 0 0 6px; }
 
 .indicator {
   display: block;
@@ -1297,12 +1296,11 @@ button {
   display: inline-block;
   -webkit-appearance: none;
   border-radius: 2em;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(69, 105, 255, 0.5);
   color: #fff;
   text-align: center;
   padding: 3px 1em;
-  background: none;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #4569FF;
   cursor: pointer;
   transition: all .2s; }
   .btn.full-width,
@@ -1323,7 +1321,8 @@ button {
   .btn:hover,
   button:hover {
     color: #fff;
-    border-color: #fff; }
+    border-color: #4569FF;
+    background-color: #f2f2f2; }
   .btn:active, .btn:focus,
   button:active,
   button:focus {
@@ -1332,8 +1331,8 @@ button {
   button:active,
   button:focus,
   button.active {
-    background-color: #fff;
-    color: #10100e; }
+    background-color: #4569FF;
+    color: #f2f2f2; }
 
 #toggle-menu {
   font-size: 50px;
@@ -1347,7 +1346,7 @@ button {
 [role="contentinfo"] {
   text-align: center;
   font-size: .8em;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   cursor: default; }
 
 .overlay {
