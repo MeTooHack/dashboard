@@ -18,7 +18,7 @@ gulp.task('styles', buildSass)
 
 gulp.task('watch', function() {
   gulp.src('stylesheets/*.scss')
-      .pipe(watch())
+      .pipe(watch('stylesheets/*.scss'))
       .pipe(sass({
         errLogToConsole: true
       }))

@@ -7,6 +7,7 @@
   100% {
     -webkit-transform: translate(0, 2000%) rotate(120deg);
     opacity: 0; } }
+
 @-webkit-keyframes dropRight {
   30% {
     -webkit-transform: translate(0, 2000%) rotate(-90deg); }
@@ -15,6 +16,7 @@
   100% {
     -webkit-transform: translate(0, 2000%) rotate(45deg);
     opacity: 0; } }
+
 @-webkit-keyframes pulseDanger {
   0% {
     opacity: 0; }
@@ -26,6 +28,7 @@
     opacity: 0; }
   100% {
     opacity: 0; } }
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scaleY(1); }
@@ -33,6 +36,7 @@
     -webkit-transform: scaleY(1.5); }
   100% {
     -webkit-transform: scaleY(1); } }
+
 @-moz-keyframes pulse {
   0% {
     -moz-transform: scaleY(1); }
@@ -40,6 +44,7 @@
     -moz-transform: scaleY(1.5); }
   100% {
     -moz-transform: scaleY(1); } }
+
 @keyframes pulse {
   0% {
     transform: scaleY(1); }
@@ -47,6 +52,7 @@
     transform: scaleY(1.5); }
   100% {
     transform: scaleY(1); } }
+
 /* Generated with Bounce.js. Edit at http://goo.gl/aPQhVQ */
 @-webkit-keyframes animation {
   0% {
@@ -142,6 +148,7 @@
   100% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
 @keyframes animation {
   0% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -10, 0, 1);
@@ -236,8 +243,8 @@
   100% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
-/*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
+
+/*------------------------------------*    $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
 /**
  * CONTENTS
@@ -249,8 +256,7 @@
  * PUSH.................Push classes.
  * PULL.................Pull classes.
  */
-/*------------------------------------*\
-    $INTRODUCTION
+/*------------------------------------*    $INTRODUCTION
 \*------------------------------------*/
 /**
  * csswizardry grids provides you with widths to suit a number of breakpoints
@@ -292,8 +298,7 @@
  *
    `class="grid__item  palm--one-third  desk--five-twelfths"`
  */
-/*------------------------------------*\
-    $VARIABLES
+/*------------------------------------*    $VARIABLES
 \*------------------------------------*/
 /**
  * If you are building a non-responsive site but would still like to use
@@ -343,8 +348,7 @@
  * You do not need to edit anything from this line onward; csswizardry-grids is
  * good to go. Happy griddin’!
  */
-/*------------------------------------*\
-    $MIXINS
+/*------------------------------------*    $MIXINS
 \*------------------------------------*/
 /**
  * These mixins are for the library to use only, you should not need to modify
@@ -356,8 +360,7 @@
  * Drop relative positioning into silent classes which can’t take advantage of
  * the `[class*="push--"]` and `[class*="pull--"]` selectors.
  */
-/*------------------------------------*\
-    $GRID SETUP
+/*------------------------------------*    $GRID SETUP
 \*------------------------------------*/
 /**
  * 1. Allow the grid system to be used on lists.
@@ -375,12 +378,12 @@
   /* [3] */ }
 
 /**
- * 1. Cause columns to stack side-by-side.
- * 2. Space columns apart.
- * 3. Align columns to the tops of each other.
- * 4. Full-width unless told to behave otherwise.
- * 5. Required to combine fluid widths and fixed gutters.
- */
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     * 5. Required to combine fluid widths and fixed gutters.
+     */
 .grid__item {
   display: inline-block;
   /* [1] */
@@ -456,12 +459,11 @@
  * Create grids with wider gutters. Extends `.grid`.
  */
 .grid--wide {
-  margin-left: -60px; }
+  margin-left: -48px; }
   .grid--wide > .grid__item {
-    padding-left: 60px; }
+    padding-left: 48px; }
 
-/*------------------------------------*\
-    $WIDTHS
+/*------------------------------------*    $WIDTHS
 \*------------------------------------*/
 /**
  * Create our width classes, prefixed by the specified namespace.
@@ -470,20 +472,20 @@
  * Our regular, non-responsive width classes.
  */
 /**
- * Whole
- */
+     * Whole
+     */
 .one-whole {
   width: 100%; }
 
 /**
- * Halves
- */
+     * Halves
+     */
 .one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
   width: 50%; }
 
 /**
- * Thirds
- */
+     * Thirds
+     */
 .one-third, .two-sixths, .four-twelfths {
   width: 33.333%; }
 
@@ -491,8 +493,8 @@
   width: 66.666%; }
 
 /**
- * Quarters
- */
+     * Quarters
+     */
 .one-quarter, .two-eighths, .three-twelfths {
   width: 25%; }
 
@@ -500,8 +502,8 @@
   width: 75%; }
 
 /**
- * Fifths
- */
+     * Fifths
+     */
 .one-fifth, .two-tenths {
   width: 20%; }
 
@@ -515,8 +517,8 @@
   width: 80%; }
 
 /**
- * Sixths
- */
+     * Sixths
+     */
 .one-sixth, .two-twelfths {
   width: 16.666%; }
 
@@ -524,8 +526,8 @@
   width: 83.333%; }
 
 /**
- * Eighths
- */
+     * Eighths
+     */
 .one-eighth {
   width: 12.5%; }
 
@@ -539,8 +541,8 @@
   width: 87.5%; }
 
 /**
- * Tenths
- */
+     * Tenths
+     */
 .one-tenth {
   width: 10%; }
 
@@ -554,8 +556,8 @@
   width: 90%; }
 
 /**
- * Twelfths
- */
+     * Twelfths
+     */
 .one-twelfth {
   width: 8.333%; }
 
@@ -573,408 +575,318 @@
  */
 @media only screen and (max-width: 480px) {
   /**
-   * Whole
-   */
+     * Whole
+     */
   .palm--one-whole {
     width: 100%; }
-
   /**
-   * Halves
-   */
+     * Halves
+     */
   .palm--one-half, .palm--two-quarters, .palm--three-sixths, .palm--four-eighths, .palm--five-tenths, .palm--six-twelfths {
     width: 50%; }
-
   /**
-   * Thirds
-   */
+     * Thirds
+     */
   .palm--one-third, .palm--two-sixths, .palm--four-twelfths {
     width: 33.333%; }
-
   .palm--two-thirds, .palm--four-sixths, .palm--eight-twelfths {
     width: 66.666%; }
-
   /**
-   * Quarters
-   */
+     * Quarters
+     */
   .palm--one-quarter, .palm--two-eighths, .palm--three-twelfths {
     width: 25%; }
-
   .palm--three-quarters, .palm--six-eighths, .palm--nine-twelfths {
     width: 75%; }
-
   /**
-   * Fifths
-   */
+     * Fifths
+     */
   .palm--one-fifth, .palm--two-tenths {
     width: 20%; }
-
   .palm--two-fifths, .palm--four-tenths {
     width: 40%; }
-
   .palm--three-fifths, .palm--six-tenths {
     width: 60%; }
-
   .palm--four-fifths, .palm--eight-tenths {
     width: 80%; }
-
   /**
-   * Sixths
-   */
+     * Sixths
+     */
   .palm--one-sixth, .palm--two-twelfths {
     width: 16.666%; }
-
   .palm--five-sixths, .palm--ten-twelfths {
     width: 83.333%; }
-
   /**
-   * Eighths
-   */
+     * Eighths
+     */
   .palm--one-eighth {
     width: 12.5%; }
-
   .palm--three-eighths {
     width: 37.5%; }
-
   .palm--five-eighths {
     width: 62.5%; }
-
   .palm--seven-eighths {
     width: 87.5%; }
-
   /**
-   * Tenths
-   */
+     * Tenths
+     */
   .palm--one-tenth {
     width: 10%; }
-
   .palm--three-tenths {
     width: 30%; }
-
   .palm--seven-tenths {
     width: 70%; }
-
   .palm--nine-tenths {
     width: 90%; }
-
   /**
-   * Twelfths
-   */
+     * Twelfths
+     */
   .palm--one-twelfth {
     width: 8.333%; }
-
   .palm--five-twelfths {
     width: 41.666%; }
-
   .palm--seven-twelfths {
     width: 58.333%; }
-
   .palm--eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /**
-   * Whole
-   */
+     * Whole
+     */
   .lap--one-whole {
     width: 100%; }
-
   /**
-   * Halves
-   */
+     * Halves
+     */
   .lap--one-half, .lap--two-quarters, .lap--three-sixths, .lap--four-eighths, .lap--five-tenths, .lap--six-twelfths {
     width: 50%; }
-
   /**
-   * Thirds
-   */
+     * Thirds
+     */
   .lap--one-third, .lap--two-sixths, .lap--four-twelfths {
     width: 33.333%; }
-
   .lap--two-thirds, .lap--four-sixths, .lap--eight-twelfths {
     width: 66.666%; }
-
   /**
-   * Quarters
-   */
+     * Quarters
+     */
   .lap--one-quarter, .lap--two-eighths, .lap--three-twelfths {
     width: 25%; }
-
   .lap--three-quarters, .lap--six-eighths, .lap--nine-twelfths {
     width: 75%; }
-
   /**
-   * Fifths
-   */
+     * Fifths
+     */
   .lap--one-fifth, .lap--two-tenths {
     width: 20%; }
-
   .lap--two-fifths, .lap--four-tenths {
     width: 40%; }
-
   .lap--three-fifths, .lap--six-tenths {
     width: 60%; }
-
   .lap--four-fifths, .lap--eight-tenths {
     width: 80%; }
-
   /**
-   * Sixths
-   */
+     * Sixths
+     */
   .lap--one-sixth, .lap--two-twelfths {
     width: 16.666%; }
-
   .lap--five-sixths, .lap--ten-twelfths {
     width: 83.333%; }
-
   /**
-   * Eighths
-   */
+     * Eighths
+     */
   .lap--one-eighth {
     width: 12.5%; }
-
   .lap--three-eighths {
     width: 37.5%; }
-
   .lap--five-eighths {
     width: 62.5%; }
-
   .lap--seven-eighths {
     width: 87.5%; }
-
   /**
-   * Tenths
-   */
+     * Tenths
+     */
   .lap--one-tenth {
     width: 10%; }
-
   .lap--three-tenths {
     width: 30%; }
-
   .lap--seven-tenths {
     width: 70%; }
-
   .lap--nine-tenths {
     width: 90%; }
-
   /**
-   * Twelfths
-   */
+     * Twelfths
+     */
   .lap--one-twelfth {
     width: 8.333%; }
-
   .lap--five-twelfths {
     width: 41.666%; }
-
   .lap--seven-twelfths {
     width: 58.333%; }
-
   .lap--eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (max-width: 1023px) {
   /**
-   * Whole
-   */
+     * Whole
+     */
   .portable--one-whole {
     width: 100%; }
-
   /**
-   * Halves
-   */
+     * Halves
+     */
   .portable--one-half, .portable--two-quarters, .portable--three-sixths, .portable--four-eighths, .portable--five-tenths, .portable--six-twelfths {
     width: 50%; }
-
   /**
-   * Thirds
-   */
+     * Thirds
+     */
   .portable--one-third, .portable--two-sixths, .portable--four-twelfths {
     width: 33.333%; }
-
   .portable--two-thirds, .portable--four-sixths, .portable--eight-twelfths {
     width: 66.666%; }
-
   /**
-   * Quarters
-   */
+     * Quarters
+     */
   .portable--one-quarter, .portable--two-eighths, .portable--three-twelfths {
     width: 25%; }
-
   .portable--three-quarters, .portable--six-eighths, .portable--nine-twelfths {
     width: 75%; }
-
   /**
-   * Fifths
-   */
+     * Fifths
+     */
   .portable--one-fifth, .portable--two-tenths {
     width: 20%; }
-
   .portable--two-fifths, .portable--four-tenths {
     width: 40%; }
-
   .portable--three-fifths, .portable--six-tenths {
     width: 60%; }
-
   .portable--four-fifths, .portable--eight-tenths {
     width: 80%; }
-
   /**
-   * Sixths
-   */
+     * Sixths
+     */
   .portable--one-sixth, .portable--two-twelfths {
     width: 16.666%; }
-
   .portable--five-sixths, .portable--ten-twelfths {
     width: 83.333%; }
-
   /**
-   * Eighths
-   */
+     * Eighths
+     */
   .portable--one-eighth {
     width: 12.5%; }
-
   .portable--three-eighths {
     width: 37.5%; }
-
   .portable--five-eighths {
     width: 62.5%; }
-
   .portable--seven-eighths {
     width: 87.5%; }
-
   /**
-   * Tenths
-   */
+     * Tenths
+     */
   .portable--one-tenth {
     width: 10%; }
-
   .portable--three-tenths {
     width: 30%; }
-
   .portable--seven-tenths {
     width: 70%; }
-
   .portable--nine-tenths {
     width: 90%; }
-
   /**
-   * Twelfths
-   */
+     * Twelfths
+     */
   .portable--one-twelfth {
     width: 8.333%; }
-
   .portable--five-twelfths {
     width: 41.666%; }
-
   .portable--seven-twelfths {
     width: 58.333%; }
-
   .portable--eleven-twelfths {
     width: 91.666%; } }
+
 @media only screen and (min-width: 1024px) {
   /**
-   * Whole
-   */
+     * Whole
+     */
   .desk--one-whole {
     width: 100%; }
-
   /**
-   * Halves
-   */
+     * Halves
+     */
   .desk--one-half, .desk--two-quarters, .desk--three-sixths, .desk--four-eighths, .desk--five-tenths, .desk--six-twelfths {
     width: 50%; }
-
   /**
-   * Thirds
-   */
+     * Thirds
+     */
   .desk--one-third, .desk--two-sixths, .desk--four-twelfths {
     width: 33.333%; }
-
   .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
     width: 66.666%; }
-
   /**
-   * Quarters
-   */
+     * Quarters
+     */
   .desk--one-quarter, .desk--two-eighths, .desk--three-twelfths {
     width: 25%; }
-
   .desk--three-quarters, .desk--six-eighths, .desk--nine-twelfths {
     width: 75%; }
-
   /**
-   * Fifths
-   */
+     * Fifths
+     */
   .desk--one-fifth, .desk--two-tenths {
     width: 20%; }
-
   .desk--two-fifths, .desk--four-tenths {
     width: 40%; }
-
   .desk--three-fifths, .desk--six-tenths {
     width: 60%; }
-
   .desk--four-fifths, .desk--eight-tenths {
     width: 80%; }
-
   /**
-   * Sixths
-   */
+     * Sixths
+     */
   .desk--one-sixth, .desk--two-twelfths {
     width: 16.666%; }
-
   .desk--five-sixths, .desk--ten-twelfths {
     width: 83.333%; }
-
   /**
-   * Eighths
-   */
+     * Eighths
+     */
   .desk--one-eighth {
     width: 12.5%; }
-
   .desk--three-eighths {
     width: 37.5%; }
-
   .desk--five-eighths {
     width: 62.5%; }
-
   .desk--seven-eighths {
     width: 87.5%; }
-
   /**
-   * Tenths
-   */
+     * Tenths
+     */
   .desk--one-tenth {
     width: 10%; }
-
   .desk--three-tenths {
     width: 30%; }
-
   .desk--seven-tenths {
     width: 70%; }
-
   .desk--nine-tenths {
     width: 90%; }
-
   /**
-   * Twelfths
-   */
+     * Twelfths
+     */
   .desk--one-twelfth {
     width: 8.333%; }
-
   .desk--five-twelfths {
     width: 41.666%; }
-
   .desk--seven-twelfths {
     width: 58.333%; }
-
   .desk--eleven-twelfths {
     width: 91.666%; } }
-/*------------------------------------*\
-    $PUSH
+
+/*------------------------------------*    $PUSH
 \*------------------------------------*/
 /**
  * Push classes, to move grid items over to the right by certain amounts.
  */
-/*------------------------------------*\
-    $PULL
+/*------------------------------------*    $PULL
 \*------------------------------------*/
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
@@ -985,6 +897,7 @@
   src: url("../fonts/entypo.eot?#iefix-he9inr") format("embedded-opentype"), url("../fonts/entypo.woff?-he9inr") format("woff"), url("../fonts/entypo.ttf?-he9inr") format("truetype"), url("../fonts/entypo.svg?-he9inr#entypo") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 .icon {
   font-family: 'entypo';
   speak: none;
@@ -1039,6 +952,7 @@ h1 .icon {
 .slide-open .slide-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
   transform: translate3d(300px, 0, 0); }
+
 .slide-open .slide-menu {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -1062,7 +976,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font: 600 1.125em/1.6 "Source Sans Pro", "Helvetica Neue", sans-serif; }
+  font: 600 1.125em / 1.6 "Source Sans Pro", "Helvetica Neue", sans-serif; }
 
 .wrapper {
   background-color: #1E1E1A;
@@ -1104,9 +1018,6 @@ h2 {
   font-size: 0.88889em;
   letter-spacing: 2px;
   margin-bottom: 1em; }
-  h2.hashtag {
-    font-size: 1em;
-    margin-bottom: 0; }
 
 .notice {
   font-size: 0.77778em;
@@ -1209,6 +1120,7 @@ section > h1 {
 
 .schedule-list:not(:last-child) {
   margin-bottom: 0.9em; }
+
 .schedule-list time {
   display: inline-block;
   margin-right: 10px;
@@ -1375,7 +1287,9 @@ time {
     display: inline;
     max-width: 60%; }
     .sponsors img.square {
-      max-height: 60px; }
+      max-height: 80px; }
+  .sponsors img:not(.square) {
+    max-height: 30px; }
 
 /* Buttons */
 .btn,
@@ -1461,7 +1375,6 @@ button {
 
 .done .animate {
   -webkit-animation: drop 4s 1s ease-in both; }
+
 .done .animate-right {
   -webkit-animation: dropRight 4s 1s ease-in both; }
-
-/*# sourceMappingURL=site.css.map */
