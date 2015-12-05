@@ -1070,7 +1070,6 @@ section > h1 {
     text-transform: none;
     letter-spacing: 0; }
   [role="article"] a {
-    color: #f2f2f2;
     font-weight: 600;
     border: 0; }
     [role="article"] a:hover {
