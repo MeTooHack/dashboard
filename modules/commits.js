@@ -71,6 +71,9 @@ var Commits = (function() {
   var commitIsMerge = function(json) {
     return /^Merge branch/.test(json.message)
   }
+  var isNoticeMessage = function(message) {
+    return (message.indexOf("NOTICE:") >= 0);
+  }
 
   return {
 
@@ -111,7 +114,7 @@ var Commits = (function() {
       if(!data.payload.commits || data.payload.commits.length === 0) return;
       if(commitIsMerge(data.payload.commits[0].message)) return
 
-      if(data.payload.commits[0].message.indexOf() === "NOTICE:") location.reload();
+      if(isNoticeMessage(data.payload.commits[0].message)) location.reload();
 
       var json = transformData(data)
 
