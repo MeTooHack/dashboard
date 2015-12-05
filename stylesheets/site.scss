@@ -4,9 +4,9 @@
 @import "icons";
 @import "sliding-nav";
 
-$background: #fff;
+$background: #8625aa;
 $accent: $background;
-$text-color: #000;
+$text-color: white;
 $leading: 1.6;
 
 $font-size: 18;
@@ -23,11 +23,11 @@ $mono: Monaco, Courier, monospaced;
 }
 
 ::selection {
-  background-color: #000;
+  background-color: #fff;
   color: $background;
 }
 ::-moz-selection {
-  background-color: #000;
+  background-color: #fff;
   color: $background;
 }
 
@@ -39,6 +39,7 @@ html {
 
 body {
   font: 600 #{($font-size / 16) * 1em}/#{$leading} $sans;
+  min-height: 100vh;
 }
 
 // this is the main wrapper due to the sliding nav.
@@ -46,6 +47,7 @@ body {
 .wrapper {
   background-color: $background;
   padding: 1% 3% $lineheight;
+  min-height: 100vh;
 }
 html.danger .wrapper {
   &::after {
@@ -147,7 +149,7 @@ dd {
 }
 
 section > h1 {
-  border-bottom: 2px solid rgba(#000, .5);
+  border-bottom: 2px solid rgba(#fff, .5);
   margin-bottom: $lineheight / 2;
 }
 
@@ -155,7 +157,7 @@ section > h1 {
   position: relative;
   margin-bottom: $lineheight;
   padding: 1em 2em;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid white;
 
   img {
     border-radius: 3px;
@@ -208,7 +210,7 @@ section > h1 {
   &.detailed {
     small {
       margin-left: 5px;
-      color: rgba(#000, .7);
+      color: rgba(#fff, .7);
     }
   }
 }
@@ -243,7 +245,7 @@ section > h1 {
 }
 
 .badge {
-  background-color: #000;
+  background-color: #fff;
   color: darken($background, 10%);
   padding: 1px 3px;
   border-radius: 3px;
@@ -253,8 +255,8 @@ section > h1 {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(#000, .6);
-  color: #000;
+  border-bottom: 1px solid rgba(#fff, .6);
+  color: #fff;
   display: inline-block;
   transition: border-color .2s;
 
@@ -262,7 +264,7 @@ a {
     transform: scale(.98);
   }
   &:hover {
-    border-color: #000;
+    border-color: #fff;
   }
 }
 
@@ -291,8 +293,8 @@ time {
     display: block;
     width: 0;
     height: 0;
-    border: $size solid #000;
-    border-color: #000 transparent transparent;
+    border: $size solid #fff;
+    border-color: #fff transparent transparent;
     position: absolute;
     left: calc(50% - #{$size});
     bottom: -$size * 2;
@@ -377,7 +379,7 @@ time {
   padding: 1em;
   font-size: .9em;
   background: #303030 url("../images/pattern.svg");
-  text-shadow: rgba(#000, .8) 0 1px 2px;
+  text-shadow: rgba(#fff, .8) 0 1px 2px;
 
   h2:not(:first-of-type) {
     margin-top: $lineheight;
@@ -385,10 +387,10 @@ time {
 }
 
 .slide-pusher {
-  box-shadow: rgba(#000, .5) -4px 0 30px;
+  box-shadow: rgba(#fff, .5) -4px 0 30px;
 }
 .slide-open .slide-pusher {
-  border-left: 1px solid rgba(#000, .3);
+  border-left: 1px solid rgba(#fff, .3);
 }
 
 /* countdown */
@@ -518,7 +520,7 @@ button {
 [role="contentinfo"] {
   text-align: center;
   font-size: .8em;
-  color: rgba(#000, .8);
+  color: rgba(#fff, .8);
   cursor: default;
 }
 

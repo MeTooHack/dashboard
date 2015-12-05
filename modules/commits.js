@@ -49,7 +49,7 @@ var Commits = (function() {
     }
 
     function parseTeam(commitUrl) {
-      return commitUrl.replace("https://api.github.com/repos/hackforrefugees/", "");
+      return commitUrl.replace("https://api.github.com/repos/metoohack/", "");
     }
 
     var message = json.payload.commits[0].message || '';

@@ -1,8 +1,9 @@
 
 var Poller = (function() {
-  var ACCESS_TOKEN = '?access_token=2dd8913aaed3' + 'cfc5c2b32' + '430acbb9fa51ed1ee47';
-  var LATEST_COMMITS_URL = 'https://api.github.com/orgs/hackforrefugees/events' + ACCESS_TOKEN,
-      REPOS_URL = 'https://api.github.com/orgs/hackforrefugees/repos' + ACCESS_TOKEN;
+    
+  var ACCESS_TOKEN = '?access_token=a38eed' + '3835a8df528b33f6383' + '9d183cdd46155fb';
+  var LATEST_COMMITS_URL = 'https://api.github.com/orgs/metoohack/events' + ACCESS_TOKEN,
+      REPOS_URL = 'https://api.github.com/orgs/metoohack/repos' + ACCESS_TOKEN;
 
       totalCommits = 0,
       etag = "",
@@ -34,6 +35,8 @@ var Poller = (function() {
     }
 
     data = (json.slice(0, index)).concat(data);
+
+    totalCommits += data.length;
 
     if(eventListeners["data"]){
       eventListeners["data"].map(function(cb){
