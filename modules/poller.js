@@ -9,7 +9,7 @@ var Poller = (function() {
       data = [],
       isPolling = false,
       poller = false,
-      INTERVAL_IN_MS = 5000,
+      INTERVAL_IN_MS = ((location.search.indexOf('fetchoften=true') >= 0) ? 5000 : (1000*60*1)),
 
       //data
       eventListeners = [];
