@@ -35,6 +35,8 @@ var Poller = (function() {
 
     data = (json.slice(0, index)).concat(data);
 
+    totalCommits += data.length;
+
     if(eventListeners["data"]){
       eventListeners["data"].map(function(cb){
         cb({commits:json.slice(0, index).reverse(), total: totalCommits});
