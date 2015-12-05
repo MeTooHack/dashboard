@@ -9,7 +9,7 @@ var Poller = (function() {
       data = [],
       isPolling = false,
       poller = false,
-      INTERVAL_IN_MS = 4000,
+      INTERVAL_IN_MS = 5000,
 
       //data
       eventListeners = [];
@@ -76,13 +76,14 @@ var Poller = (function() {
       // })
   }
 
-  function initIsDone(commitCount){
-    totalCommits = commitCount.reduce(function(a, b) { return a + b; }, 0);
+  function initIsDone(){
     fetchData();
     poller = setInterval(fetchData, INTERVAL_IN_MS);
   }
 
+
   function initiate(){
+    console.log()
     fetch(REPOS_URL)
       .then(function(response){
         return response.json();
@@ -99,13 +100,16 @@ var Poller = (function() {
             .then(function(contributors){
               if(contributors.length === 0) return 0;
               return contributors.map(function(contributor){
-                console.log(contributor.total)
-                return contributor.total || 0
+                totalCommits += (contributor.total || 0);
               })
             })
-            .then(initIsDone);
         })
       })
+      .then(function(){
+        setTimeout(function(){
+          initIsDone();
+        }, 1000);
+      });
   }
 
   function startPolling(){

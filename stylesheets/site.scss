@@ -154,11 +154,8 @@ section > h1 {
 [role="article"] {
   position: relative;
   margin-bottom: $lineheight;
-  background-color: #FF6E40;
-  color: #fff;
-  border-radius: 5px;
   padding: 1em 2em;
-  box-shadow: rgba(#000, .3) 0 1px 3px;
+  border-bottom: 5px solid black;
 
   img {
     border-radius: 3px;
@@ -361,9 +358,10 @@ time {
 .latest-commits {
   position: relative;
 
+
   .list {
     height: 500px;
-    //overflow: scroll;
+    overflow: scroll;
   }
 }
 
@@ -491,9 +489,9 @@ button {
   }
 
   &:hover {
-    color: #fff;
+    color: #4569FF;
     border-color: #4569FF;
-    background-color: darken($background, 5%);
+    background-color: transparent;
   }
 
   &:active, &:focus {

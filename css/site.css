@@ -1061,11 +1061,8 @@ section > h1 {
 [role="article"] {
   position: relative;
   margin-bottom: 1.8em;
-  background-color: #FF6E40;
-  color: #fff;
-  border-radius: 5px;
   padding: 1em 2em;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px; }
+  border-bottom: 5px solid black; }
   [role="article"] img {
     border-radius: 3px; }
   [role="article"] h2 {
@@ -1222,7 +1219,8 @@ time {
 .latest-commits {
   position: relative; }
   .latest-commits .list, .latest-commits .horizontal-list, .latest-commits .schedule-list, .latest-commits .checklist {
-    height: 500px; }
+    height: 500px;
+    overflow: scroll; }
 
 #commits + .gradient {
   position: absolute;
@@ -1320,9 +1318,9 @@ button {
     top: 1px; }
   .btn:hover,
   button:hover {
-    color: #fff;
+    color: #4569FF;
     border-color: #4569FF;
-    background-color: #f2f2f2; }
+    background-color: transparent; }
   .btn:active, .btn:focus,
   button:active,
   button:focus {

@@ -108,8 +108,10 @@ var Commits = (function() {
       if(!this.template) {
         throw "No template provided! Call Commits.templateString with a string"
       }
-      if(!data.payload.commits) return;
+      if(!data.payload.commits || data.payload.commits.length === 0) return;
       if(commitIsMerge(data.payload.commits[0].message)) return
+
+      if(data.payload.commits[0].message.indexOf() === "NOTICE:") location.reload();
 
       var json = transformData(data)
 
