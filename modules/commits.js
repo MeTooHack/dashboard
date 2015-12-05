@@ -68,11 +68,19 @@ var Commits = (function() {
     })
   }
 
+  function addMinutes(date, minutes) {
+    return new Date(date.getTime() + minutes*60000);
+  }
+
   var commitIsMerge = function(json) {
     return /^Merge branch/.test(json.message)
   }
-  var isNoticeMessage = function(message) {
-    return (message.indexOf("NOTICE:") >= 0);
+
+  var isNoticeMessage = function(data) {
+    if(!data.payload.commits[0].message.indexOf("NOTICE:") >= 0) return false;
+    var now = new Date();
+
+    addMinutes(now, 1);
   }
 
   return {
@@ -114,7 +122,7 @@ var Commits = (function() {
       if(!data.payload.commits || data.payload.commits.length === 0) return;
       if(commitIsMerge(data.payload.commits[0].message)) return
 
-      if(isNoticeMessage(data.payload.commits[0].message)) location.reload();
+      //if(isNoticeMessage(data)) location.reload();
 
       var json = transformData(data)
 
