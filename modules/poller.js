@@ -94,7 +94,7 @@ var Poller = (function() {
       .then(function(repos){
         return repos.map(function(repo){
 
-          if(repo.url.indexOf("hackoutwest.github.io") >= 0) return;
+          if(repo.url.indexOf("metoohack.github.io") >= 0) return;
 
           fetch(repo.url + '/stats/contributors' + ACCESS_TOKEN)
             .then(function(response){
