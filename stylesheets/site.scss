@@ -3,6 +3,7 @@
 @import "utils";
 @import "icons";
 @import "sliding-nav";
+@import "slick.css";
 
 $background: #8625aa;
 $accent: $background;
@@ -424,6 +425,7 @@ time {
 }
 
 .sponsors {
+  min-height: 400px;
   margin-top: $lineheight;
 
   .notice {
@@ -443,16 +445,23 @@ time {
   }
 
   img {
+    padding: 10px;
+    max-height: 400px;
     display: inline;
-    max-width: 60%;
+    width: 100%;
+    object-fit: contain;
+    background: white;
 
-    &.square {
-      max-height: 80px;
+    &.white {
+      filter: invert(1);
+      background: black;
     }
   }
 
-  img:not(.square) {
-    max-height: 30px;
+  .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

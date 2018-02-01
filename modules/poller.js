@@ -138,4 +138,3 @@ var Poller = (function() {
     on: addEventListener
   }
 })()
-
