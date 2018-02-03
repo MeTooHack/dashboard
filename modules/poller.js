@@ -1,6 +1,7 @@
 
 var Poller = (function() {
     
+  var YOLO = 'this token below is actually generated from a dummy account so there isn\'t';
   var ACCESS_TOKEN = '?access_token=a38eed' + '3835a8df528b33f6383' + '9d183cdd46155fb';
   var LATEST_COMMITS_URL = 'https://api.github.com/orgs/metoohack/events' + ACCESS_TOKEN,
       REPOS_URL = 'https://api.github.com/orgs/metoohack/repos' + ACCESS_TOKEN;
